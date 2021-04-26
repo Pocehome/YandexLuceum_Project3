@@ -7,7 +7,7 @@ from wikipedia import wikipedia
 
 from aut_reg_sl import aut_reg_sl
 
-token = "a0ee4c846b3ff045fb7c4fa94244e402aff417bf07f6f4729db6398842d9e9f0af0dcf85e657e711d6019"
+token = "cfd06f1308c729bb30731feb2d509fb532db16684c1f70f46f8fe4b86fb505ccd98ee4bb0258a9c3eff80"
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
@@ -219,6 +219,7 @@ def weather(us_id, request):
             answer_humidity = ", влажность воздуха: " + str(humidity) + "%"
             answer = general + temp_answer + wind_mess + answer_humidity + '.'
             write_msg(us_id, answer, create_empty_keyboard())
+            write_msg(us_id, "Введите название города, погоду в котором вы хотите узнать.", create_empty_keyboard())
 
 
 def wiki_response(request_text):
