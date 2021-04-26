@@ -29,12 +29,6 @@ def create_help_keyboard():
     keyboard.add_line()
     keyboard.add_button("Регион регистрации автомобиля", color=VkKeyboardColor.PRIMARY)
 
-    # keyboard.add_button("9", color=VkKeyboardColor.POSITIVE)
-    # keyboard.add_button("8", color=VkKeyboardColor.NEGATIVE)
-    # keyboard.add_line()  #  Обозначает добавление новой строки
-    # keyboard.add_button("7", color=VkKeyboardColor.PRIMARY)
-    # keyboard.add_button("/", color=VkKeyboardColor.SECONDARY)
-
     return keyboard.get_keyboard()
 
 
@@ -108,18 +102,6 @@ def quest(us_id, stage):
         write_msg(us_id, 'Посередине находится озеро и на его дне вы видите ключ.', create_empty_keyboard())
         write_msg(us_id, 'Также на другом его берегу вы замечаете дверь.',
                   create_quest_keyboard('Нырнуть за ключом', 'Попробовать открыть дверь'))
-
-    # elif stage == 3:
-    #     # write_msg(event.user_id, 'Вы оказываетесь в пещере.', create_empty_keyboard())
-    #     # write_msg(event.user_id, 'Посередине находится озеро и на его дне вы видите ключ.', create_empty_keyboard())
-    #     write_msg(event.user_id, 'Также на другом его берегу вы замечаете дверь.',
-    #               create_quest_keyboard('Нырнуть за ключом', 'Попробовать открыть дверь'))
-
-    # elif stage == 4:
-    #     # write_msg(event.user_id, 'Вы оказываетесь в пещере.', create_empty_keyboard())
-    #     # write_msg(event.user_id, 'Посередине находится озеро и на его дне вы видите ключ.', create_empty_keyboard())
-    #     write_msg(event.user_id, 'Также на другом его берегу вы замечаете дверь.',
-    #               create_quest_keyboard('Нырнуть за ключом', 'Попробовать открыть дверь'))
 
     elif stage == 5:
         write_msg(us_id, 'Вы выпиваете из пузырька и замечаете, как вокруг вас всё начинает расти.',
@@ -396,13 +378,6 @@ def main():
                     elif request == 'пойти в дверь №2' and quest_stage == 0:
                         quest_stage = 2
                         quest(event.user_id, quest_stage)
-
-                    # elif request == 'пойти в дверь №3' and quest_stage == 0:
-                    #     quest_stage = 3
-                    #     quest(event.user_id, quest_stage)
-                    # elif request == 'пойти в дверь №4' and quest_stage == 0:
-                    #     quest_stage = 4
-                    #     quest(event.user_id, quest_stage)
 
                     elif request == 'выпить из пузырька' and quest_stage == 1:
                         quest_stage = 5
