@@ -419,7 +419,7 @@ def main():
 
                 else:
                     write_msg(event.user_id, "Не понимаю вашего ответа... Если нужна помощь введите 'help' "
-                                             "или 'помощь'", create_empty_keyboard())
+                                             "или 'помощь'.", create_empty_keyboard())
 
 
 if __name__ == '__main__':
