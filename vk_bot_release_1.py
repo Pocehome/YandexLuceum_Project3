@@ -1,5 +1,4 @@
 import vk_api
-import vk
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 from vk_api.utils import get_random_id
@@ -418,7 +417,8 @@ def main():
                     write_msg(event.user_id, "До свидания.", create_empty_keyboard())
 
                 else:
-                    write_msg(event.user_id, "Не понимаю вашего ответа...", create_empty_keyboard())
+                    write_msg(event.user_id, "Не понимаю вашего ответа... Если нужна помощь введите 'help' "
+                                             "или 'помощь'", create_empty_keyboard())
 
 
 if __name__ == '__main__':
