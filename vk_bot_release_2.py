@@ -444,7 +444,8 @@ def main():
                 # общение с пользователем
                 elif request == "статистика":
                     write_msg(event.user_id,
-                              "Вы поставили нашим постам {} лайков".format(str(like_statistics(event.user_id))), create_empty_keyboard())
+                              "Вы поставили нашим постам {} лайков".format(str(like_statistics(event.user_id))),
+                              create_empty_keyboard())
                 elif request == "привет" or request == 'hello':
                     write_msg(event.user_id, "Здравствуйте.", create_empty_keyboard())
 
