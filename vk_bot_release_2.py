@@ -103,8 +103,7 @@ def like_statistics(user_id):
                                                    'access_token': access_token,
                                                    'v': '5.130'
                                                    })
-            result_post_maybe_like = post_maybe_like.json()
-            result_post_maybe_like = result_post_maybe_like['response']["liked"]
+            result_post_maybe_like = post_maybe_like.json()['response']["liked"]
             if result_post_maybe_like == 1:
                 count_likes += 1
         except:
