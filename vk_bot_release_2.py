@@ -2,7 +2,7 @@ import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 from vk_api.utils import get_random_id
-import requests
+import requests 
 from wikipedia import wikipedia
 
 from aut_reg_sl import aut_reg_sl
